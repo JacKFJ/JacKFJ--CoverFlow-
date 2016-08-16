@@ -31,7 +31,7 @@
     _loopView.delegate =  self;
     [_loopView registerClass:[DiyCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        _loopView.contentOffset = CGPointMake(66 * _loopView.bounds.size.width , 0);
+        _loopView.contentOffset = CGPointMake(20 * _loopView.bounds.size.width , 0);
     });
     
     _names = @[@"老王",@"老李",@"小王",@"2B",@"傻X",@"测试"];
@@ -41,7 +41,7 @@
 #pragma mark -1.代理方法
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.names.count *200;
+    return self.names.count *120;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
